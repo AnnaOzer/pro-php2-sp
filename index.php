@@ -6,3 +6,5 @@
  * Time: 17:47
  */
 require __DIR__ . 'autoload.php';
+
+$db = new \App\Db();
