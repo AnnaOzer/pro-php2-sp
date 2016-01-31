@@ -9,6 +9,6 @@ require __DIR__ . '/autoload.php';
 
 $db = new \App\Db();
 
-$data = $db->query('SELECT * FROM `foo`');
+$data = $db->query('SELECT * FROM `foo` WHERE `id`>100');
 var_dump($data);
 
