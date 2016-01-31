@@ -25,13 +25,13 @@ class Db {
         return $res;
     }
 
-    public function query($sql)
+    public function query($sql, $class)
     {
         $sth=$this->dbh->prepare($sql); // подготовили запрос
         $res=$sth->execute(); // выполнили запрос
 
         if(false!==$res) { // если незультат выполнения запроса не false
-            return $sth->fetchAll(\PDO::FETCH_CLASS, 'App\\Models\\User'); // получим все данные выполнения запроса
+            return $sth->fetchAll(\PDO::FETCH_CLASS, $class); // получим все данные выполнения запроса
             // доп. параметры: режим превращения данных, какого класса должны быть объекты
         }
 
