@@ -11,7 +11,7 @@ namespace App;
 
 class Db {
 
-    public $dbh;
+    protected $dbh;
 
     public function __construct()
     {
