@@ -12,6 +12,6 @@ namespace App;
 class Db {
     public function __construct()
     {
-        echo 'Hello DB!';
+       $dbh = new \PDO('mysql:host=127.0.0.1; dbname=pro-php2-sp', 'root', '');
     }
 } 
