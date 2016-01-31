@@ -1,1 +1,3 @@
 CREATE DATABASE `pro-php2-sp` CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE TABLE `foo` (`id` SERIAL, `name` VARCHAR(100));
+INSERT INTO `foo` (`name`) VALUES ('Иван'), ('Пётр'), ('Марья');
