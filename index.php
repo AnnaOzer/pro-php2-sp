@@ -9,4 +9,6 @@ require __DIR__ . '/autoload.php';
 
 $db = new \App\Db();
 
-var_dump($db);
+$res = $db->execute('CREATE TABLE `foo` (`id` SERIAL)');// ожидаем true при первом запуске, false при последующих
+var_dump($res);
+

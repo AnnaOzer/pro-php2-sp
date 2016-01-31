@@ -17,4 +17,11 @@ class Db {
     {
        $this->dbh = new \PDO('mysql:host=127.0.0.1; dbname=pro-php2-sp', 'root', '');
     }
+
+    public function execute($sql)
+    {
+        $sth=$this->dbh->prepare($sql); // prepare() возвращает специально подготовленный запрос, т.е. стейтмент
+        $res=$sth->execute(); // execute() возвращает true или false
+        return $res;
+    }
 } 
