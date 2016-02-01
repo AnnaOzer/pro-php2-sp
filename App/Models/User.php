@@ -12,7 +12,7 @@ use App\Db;
 
 class User {
 
-    public static $table = 'users';
+    const TABLE = 'users';
 
     public $email;
     public $name;
