@@ -10,5 +10,5 @@ require __DIR__ . '/autoload.php';
 
 
 
-echo \App\Models\User::$table;
+echo \App\Models\User::TABLE;
 

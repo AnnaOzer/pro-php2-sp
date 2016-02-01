@@ -21,7 +21,7 @@ class User {
     {
         $db = new Db();
         return $db->query(
-            'SELECT * FROM `users`',
+            'SELECT * FROM' . self::TABLE,
             'App\Models\User'
         );
     }
