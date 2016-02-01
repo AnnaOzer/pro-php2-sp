@@ -11,6 +11,9 @@ namespace App\Models;
 use App\Db;
 
 class User {
+
+    public static $table;
+
     public $email;
     public $name;
 
