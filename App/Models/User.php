@@ -22,7 +22,7 @@ class User {
         $db = new Db();
         return $db->query(
             'SELECT * FROM' . self::TABLE,
-            'App\Models\User'
+            self::class
         );
     }
 } 
