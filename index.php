@@ -8,7 +8,5 @@
 require __DIR__ . '/autoload.php';
 
 
-
-
-echo \App\Models\User::TABLE;
-
+$users=\App\Models\User::findAll();
+var_dump($users);
