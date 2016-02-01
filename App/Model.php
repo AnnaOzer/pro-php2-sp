@@ -9,7 +9,7 @@
 namespace App;
 
 
-class Model {
+abstract class Model {
 
     const TABLE = '';
 
