@@ -14,7 +14,7 @@ class User {
     public $email;
     public $name;
 
-    public function findAll()
+    public static function findAll()
     {
         $db = new Db();
         return $db->query(
