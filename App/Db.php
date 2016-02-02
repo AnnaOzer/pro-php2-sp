@@ -18,17 +18,17 @@ class Db {
        $this->dbh = new \PDO('mysql:host=127.0.0.1; dbname=pro-php2-sp', 'root', '');
     }
 
-    public function execute($sql)
+    public function execute($sql, $params=[])
     {
         $sth=$this->dbh->prepare($sql); // prepare() возвращает специально подготовленный запрос, т.е. стейтмент
-        $res=$sth->execute(); // execute() возвращает true или false
+        $res=$sth->execute($params); // execute() возвращает true или false
         return $res;
     }
 
-    public function query($sql, $class)
+    public function query($sql, $class, $params=[])
     {
         $sth=$this->dbh->prepare($sql); // подготовили запрос
-        $res=$sth->execute(); // выполнили запрос
+        $res=$sth->execute($params); // выполнили запрос
 
         if(false!==$res) { // если незультат выполнения запроса не false
             return $sth->fetchAll(\PDO::FETCH_CLASS, $class); // получим все данные выполнения запроса
